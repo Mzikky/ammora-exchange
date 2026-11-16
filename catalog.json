@@ -1,0 +1,527 @@
+
+===== giwaSepoliaAutoRouteDeployment =====
+{
+  "environment": "testnet",
+  "slot": "v4-auto-route-20260917",
+  "sourceCommit": "258e87b608b8f998e550142531d108e21c7282f6",
+  "startBlock": "36220000n",
+  "chain": {
+    "id": 91342,
+    "name": "GIWA Sepolia",
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "rpcUrls": [
+      "https://sepolia-rpc.giwa.io"
+    ],
+    "blockExplorerUrl": "https://sepolia-explorer.giwa.io"
+  },
+  "contracts": {
+    "launch": {
+      "protocolVersion": 4,
+      "feePolicy": "0x17B44C14F640fD429740FA3220f47a567c62725C",
+      "factory": "0x35353a2Dab7426EcCAe6f5FB267702a542ab68fA",
+      "firstBuyExecutor": "0x1a19a3b0e69b33db3a2f9b2487866b4be04dd451",
+      "configRegistry": "0x6d043014972b87406C4757a5f2d655A24e0b0aF9",
+      "mathModule": "0xbF5f52525E7415896bCa7f7cBADcEB294dF173ef",
+      "metadataRegistry": null,
+      "graduationAdapter": "0xF1A0f23036Aae88EEcecd1D9205Dd78c388fe263",
+      "concentratedFactory": "0x9eBD78f3839996014238728b4c9C2f2A4e6759Cb",
+      "concentratedPositionManager": "0x089163706d9956d7baeCeDF4eAb4aD6CcE7Ca2D6",
+      "concentratedFeeController": "0x71Fea1fb18647986C4e02D0D06BFb6dD2491F6fE",
+      "compoundingFactory": "0x303EaA3BcF86283CBfe3f0E01290C11452bF91cf",
+      "compoundingFeeController": "0x00eaab75E3EA5cc68d39Ba8b7E531a0F822e4A8b"
+    },
+    "liquidityMarketMaker": {
+      "deployer": "0x8274c961bd026c35c83b6f88a545729a4d4b13e9",
+      "factory": "0x63c9f1cab865d708a49df5304b59e91474860bde",
+      "positionManager": "0xcde333bfa48ba90e6a6db75775488ac34d03e2c8",
+      "binLens": "0x2e6db44c2743666c858e87f15649354f394cc082",
+      "limitOrderManager": "0xd2958beac2db8e384a35e79aa96c446c6e811829",
+      "zapRouter": "0x76f82067d9c4b0a5a56a53f821e4b3bccf67a9bc",
+      "rewardManager": "0x94b3c9aa27c076607bc36211083d943173725ae6",
+      "oracle": "0x65933a1b181840bb2d4b1a64624cedce2e7ebb83",
+      "marketSyncController": "0xdf040d925dc2abaf02dc3ed3d669e75f9ca0a3dc"
+    },
+    "feeSharing": {
+      "factory": "0xb6131d1f86321c3de61f0e92fe136fa82e078927"
+    },
+    "policy": {
+      "tokenPolicyRegistry": "0xADD644Af3a868Ef4165e04CA5eac280ab5819bE3"
+    },
+    "routers": {
+      "executionRegistry": "0x3CDD7cC246Cc49aEa779E5E589Bd175251617626",
+      "native": "0xade9E6dEF440E05640ed07c4a701C238B9FB66a8",
+      "permit": "0xd0396d6c5ff4d1238c937b084cd9a3632374cc64",
+      "zap": "0x81f18aD1654A6dFc89388C8FFFFc7BB616a9f6d0",
+      "permit2": "0x000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    "vaults": {
+      "genesisFactory": "0xb268bf745d803800a3a31b331cad0547157c1e40",
+      "yieldFactory": "0x9f37ab9afba33ca28ea28327f0946343ee301c7f"
+    },
+    "tokens": {
+      "wrappedNative": "0x4200000000000000000000000000000000000006"
+    }
+  }
+}
+
+===== giwaSepoliaAutoRoute =====
+{
+  "source": "custom",
+  "environment": "testnet",
+  "slot": "v4-auto-route-20260917",
+  "chainId": 91342,
+  "chainName": "GIWA Sepolia",
+  "rpcUrls": [
+    "https://sepolia-rpc.giwa.io"
+  ],
+  "blockExplorerUrl": "https://sepolia-explorer.giwa.io",
+  "nativeCurrency": {
+    "name": "Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "wrappedNative": "0x4200000000000000000000000000000000000006",
+  "blockTimeSeconds": 1,
+  "aggregationRouter": "0x176d8c2b26C6373Ba7c9dd5ed8E1a626caf2f206",
+  "aggregationExecutionRegistry": "0xCCa3e38eAa4F00e43599646a75CcA164B97cC4eB",
+  "aggregationAuthorities": {
+    "owner": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+    "guardian": "0xBda1Cfd6F20d45cFd42C1fE43be713ddAbCF88f7"
+  },
+  "aggregationRegistrationDelaySeconds": 600,
+  "nativeRouter": "0xade9E6dEF440E05640ed07c4a701C238B9FB66a8",
+  "executionRegistry": "0x3CDD7cC246Cc49aEa779E5E589Bd175251617626",
+  "tokenPolicyRegistry": "0xADD644Af3a868Ef4165e04CA5eac280ab5819bE3",
+  "permit2": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+  "multicall3": null,
+  "alcAggregationAdapter": "0x074e4e25D1575fa2e66C7638F78c4AF5283eb37C",
+  "uniswapV4Venue": {
+    "handleFactory": "0x3819200DD891C98f0443607aC9f3116f5a1CeAA7",
+    "handleImplementation": "0xA6c068EB674Fe0EbF7D79a24944E47C40AdcC30A",
+    "adapter": "0x91fC9eb5Ea887BeEcf087eb8f035943877C01A3D",
+    "poolManager": "0x794b8D559cFA850DCFc370201497d626f5991529",
+    "stateView": "0x2b51363aDDCe6c6FB688f174836b2AE45Bc5e9C7",
+    "startBlock": "36741670n",
+    "valuation": {
+      "mode": "quote-asset",
+      "quoteAsset": "0x4200000000000000000000000000000000000006",
+      "quoteAssetDecimals": 18,
+      "quoteAssetLabel": "WETH",
+      "minimumLiquidity": "500000000000000n",
+      "referenceSource": "registered-venue",
+      "testnetOnly": true
+    }
+  },
+  "factories": [
+    {
+      "id": "dbc-v4",
+      "kind": "dbc",
+      "address": "0x35353a2Dab7426EcCAe6f5FB267702a542ab68fA",
+      "abiVersion": "v4",
+      "startBlock": "36220000n",
+      "runtimeCodeHash": "0xf4bdf481252fb37bae95df148ba66e788ff59f22205d4e9c2f4df2c55c4fa173",
+      "execution": {
+        "poolImplementation": "0x014133029714f185D976549Dd4Ea2d6Aca9EC031",
+        "implementationRuntimeCodeHash": "0xb4a95aa7c6310ba650ef3b77fabf62a6f5fbe03c21fae708b4950c71316febe5",
+        "cloneRuntimeCodeHash": "0xf6d734fd70de98059728212da53b68331a7585d60ca214aa0c42bbbbf3306623"
+      },
+      "bindings": [
+        {
+          "name": "configRegistry",
+          "address": "0x6d043014972b87406C4757a5f2d655A24e0b0aF9",
+          "runtimeCodeHash": null
+        },
+        {
+          "name": "graduationAdapter",
+          "address": "0xF1A0f23036Aae88EEcecd1D9205Dd78c388fe263",
+          "runtimeCodeHash": null
+        },
+        {
+          "name": "feePolicy",
+          "address": "0x17B44C14F640fD429740FA3220f47a567c62725C",
+          "runtimeCodeHash": null
+        }
+      ]
+    },
+    {
+      "id": "concentrated-v4",
+      "kind": "concentrated",
+      "address": "0x9eBD78f3839996014238728b4c9C2f2A4e6759Cb",
+      "abiVersion": "v4",
+      "startBlock": "36220000n",
+      "runtimeCodeHash": "0x5ec422e766da1fa07cc2933f3999a3c8b36e76bdca5a4824f97b9b58c7ae7334",
+      "execution": {
+        "poolImplementation": "0x16aC2947598408d51999346c4BCFAB5f9c5c0c65",
+        "implementationRuntimeCodeHash": "0x65ee94939140483e0435412378e8530014202c7198470828531fc00c4e9f3352",
+        "cloneRuntimeCodeHash": "0xaf413778e53da65f7135682fade8580f8070622e1dbe11d6ceda3dcb593753ef"
+      },
+      "bindings": [
+        {
+          "name": "positionManager",
+          "address": "0x089163706d9956d7baeCeDF4eAb4aD6CcE7Ca2D6",
+          "runtimeCodeHash": null
+        }
+      ]
+    },
+    {
+      "id": "compounding-v4",
+      "kind": "compounding",
+      "address": "0x303EaA3BcF86283CBfe3f0E01290C11452bF91cf",
+      "abiVersion": "v4",
+      "startBlock": "36220000n",
+      "runtimeCodeHash": "0xc1fa11403f6df52b1f45f7dea96580d8796d5c02684a1d11d5426313e3809b48",
+      "execution": {
+        "poolImplementation": "0xa31Aab5A152DecD122040A0EAbF97122974D4Fcc",
+        "implementationRuntimeCodeHash": "0xb5d04cce25ab654abd49e64f468b0e8d9dba199efa3c706f75e8cace2b465431",
+        "cloneRuntimeCodeHash": "0x82d043220910df0e1747b48d8821414eef063db47760d01ff03bb0f0d69e967d"
+      },
+      "bindings": []
+    },
+    {
+      "id": "almm-v3",
+      "kind": "almm",
+      "address": "0x63c9f1cab865d708a49df5304b59e91474860bde",
+      "abiVersion": "v3",
+      "startBlock": "36220000n",
+      "runtimeCodeHash": null,
+      "execution": null,
+      "bindings": [
+        {
+          "name": "positionManager",
+          "address": "0xcde333bfa48ba90e6a6db75775488ac34d03e2c8",
+          "runtimeCodeHash": null
+        },
+        {
+          "name": "binLens",
+          "address": "0x2e6db44c2743666c858e87f15649354f394cc082",
+          "runtimeCodeHash": null
+        }
+      ]
+    }
+  ],
+  "finality": {
+    "kind": "confirmations",
+    "confirmations": 12
+  },
+  "runtimeCodeHashes": {
+    "0x1a19a3b0e69b33db3a2f9b2487866b4be04dd451": "0x0c2dea9d7e87f7974191b02162a131dbe38fd500681e835a2cb20b7a8b9f62e4",
+    "0xade9e6def440e05640ed07c4a701c238b9fb66a8": "0x3cd701f7547bf1ba314934558d01c33cc4909756b376a90a285e1645a653219c",
+    "0x3cdd7cc246cc49aea779e5e589bd175251617626": "0x1ec00147713743740d45896697607c3ad7c1bfe83a2b1303308fce4303936449",
+    "0x81f18ad1654a6dfc89388c8ffffc7bb616a9f6d0": "0xa5e3c858e69dc7759f286319a1d915d4aad3bc977ce68990435034309bb006a2",
+    "0x35353a2dab7426eccae6f5fb267702a542ab68fa": "0xf4bdf481252fb37bae95df148ba66e788ff59f22205d4e9c2f4df2c55c4fa173",
+    "0xadd644af3a868ef4165e04ca5eac280ab5819be3": "0xdb5e4bb300c932111ac68fe35f79752b6532217abecd31535ac7e59b06eda010",
+    "0xcca3e38eaa4f00e43599646a75cca164b97cc4eb": "0xd217691100337f885c4f9114608b648a2e6bcc15e9f9ab0f503049943c614a76",
+    "0x176d8c2b26c6373ba7c9dd5ed8e1a626caf2f206": "0x984b7f4a5143e7df50b6e9fa10d8acfc6f73e2c40773b160d7e430a29e6ba29c",
+    "0x074e4e25d1575fa2e66c7638f78c4af5283eb37c": "0xdcea75c8019820c32e10e438de0fef47a3c0106b210f20f53316489716e08c4f",
+    "0x014133029714f185d976549dd4ea2d6aca9ec031": "0xb4a95aa7c6310ba650ef3b77fabf62a6f5fbe03c21fae708b4950c71316febe5",
+    "0x9ebd78f3839996014238728b4c9c2f2a4e6759cb": "0x5ec422e766da1fa07cc2933f3999a3c8b36e76bdca5a4824f97b9b58c7ae7334",
+    "0x303eaa3bcf86283cbfe3f0e01290c11452bf91cf": "0xc1fa11403f6df52b1f45f7dea96580d8796d5c02684a1d11d5426313e3809b48",
+    "0x4200000000000000000000000000000000000006": "0xa62eedb6ad76577d404f9030968b640d14e72bdcd6428707d0d2f0f18546c294",
+    "0x16ac2947598408d51999346c4bcfab5f9c5c0c65": "0x65ee94939140483e0435412378e8530014202c7198470828531fc00c4e9f3352",
+    "0xa31aab5a152decd122040a0eabf97122974d4fcc": "0xb5d04cce25ab654abd49e64f468b0e8d9dba199efa3c706f75e8cace2b465431",
+    "0x3819200dd891c98f0443607ac9f3116f5a1ceaa7": "0x312fbe21c83c2fe3cd64930becf79564644830c5c08fc9ff0f0b09789668b8a6",
+    "0xa6c068eb674fe0ebf7d79a24944e47c40adcc30a": "0x932b476de5fe9f674f82f8cdde32bf34ca30afe05a448dc49e82b419a8ae779f",
+    "0x91fc9eb5ea887beecf087eb8f035943877c01a3d": "0xdc070f0904ef40f6b8f22e20c9e3df9534cac5cd17636e7762c284af30eff27b",
+    "0x794b8d559cfa850dcfc370201497d626f5991529": "0xe1ca28fd5ac0d7789c3da75163d30bb899afc0b44061018521da14350d8a07c5",
+    "0x2b51363addce6c6fb688f174836b2ae45bc5e9c7": "0xc268fbc62fa8a2242cd7dc8ebc02dc0166c9a6b792d0e76f93cc2e317f02a8c5"
+  },
+  "capabilities": {
+    "directExactInput": true,
+    "nativeInput": true,
+    "atomicMultiHop": true,
+    "maxHops": 3,
+    "atomicTwoHop": true
+  }
+}
+
+===== giwaSepoliaAutoRouteCatalog =====
+{
+  "91342": {
+    "source": "custom",
+    "environment": "testnet",
+    "slot": "v4-auto-route-20260917",
+    "chainId": 91342,
+    "chainName": "GIWA Sepolia",
+    "rpcUrls": [
+      "https://sepolia-rpc.giwa.io"
+    ],
+    "blockExplorerUrl": "https://sepolia-explorer.giwa.io",
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "wrappedNative": "0x4200000000000000000000000000000000000006",
+    "blockTimeSeconds": 1,
+    "aggregationRouter": "0x176d8c2b26C6373Ba7c9dd5ed8E1a626caf2f206",
+    "aggregationExecutionRegistry": "0xCCa3e38eAa4F00e43599646a75CcA164B97cC4eB",
+    "aggregationAuthorities": {
+      "owner": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+      "guardian": "0xBda1Cfd6F20d45cFd42C1fE43be713ddAbCF88f7"
+    },
+    "aggregationRegistrationDelaySeconds": 600,
+    "nativeRouter": "0xade9E6dEF440E05640ed07c4a701C238B9FB66a8",
+    "executionRegistry": "0x3CDD7cC246Cc49aEa779E5E589Bd175251617626",
+    "tokenPolicyRegistry": "0xADD644Af3a868Ef4165e04CA5eac280ab5819bE3",
+    "permit2": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+    "multicall3": null,
+    "alcAggregationAdapter": "0x074e4e25D1575fa2e66C7638F78c4AF5283eb37C",
+    "uniswapV4Venue": {
+      "handleFactory": "0x3819200DD891C98f0443607aC9f3116f5a1CeAA7",
+      "handleImplementation": "0xA6c068EB674Fe0EbF7D79a24944E47C40AdcC30A",
+      "adapter": "0x91fC9eb5Ea887BeEcf087eb8f035943877C01A3D",
+      "poolManager": "0x794b8D559cFA850DCFc370201497d626f5991529",
+      "stateView": "0x2b51363aDDCe6c6FB688f174836b2AE45Bc5e9C7",
+      "startBlock": "36741670n",
+      "valuation": {
+        "mode": "quote-asset",
+        "quoteAsset": "0x4200000000000000000000000000000000000006",
+        "quoteAssetDecimals": 18,
+        "quoteAssetLabel": "WETH",
+        "minimumLiquidity": "500000000000000n",
+        "referenceSource": "registered-venue",
+        "testnetOnly": true
+      }
+    },
+    "factories": [
+      {
+        "id": "dbc-v4",
+        "kind": "dbc",
+        "address": "0x35353a2Dab7426EcCAe6f5FB267702a542ab68fA",
+        "abiVersion": "v4",
+        "startBlock": "36220000n",
+        "runtimeCodeHash": "0xf4bdf481252fb37bae95df148ba66e788ff59f22205d4e9c2f4df2c55c4fa173",
+        "execution": {
+          "poolImplementation": "0x014133029714f185D976549Dd4Ea2d6Aca9EC031",
+          "implementationRuntimeCodeHash": "0xb4a95aa7c6310ba650ef3b77fabf62a6f5fbe03c21fae708b4950c71316febe5",
+          "cloneRuntimeCodeHash": "0xf6d734fd70de98059728212da53b68331a7585d60ca214aa0c42bbbbf3306623"
+        },
+        "bindings": [
+          {
+            "name": "configRegistry",
+            "address": "0x6d043014972b87406C4757a5f2d655A24e0b0aF9",
+            "runtimeCodeHash": null
+          },
+          {
+            "name": "graduationAdapter",
+            "address": "0xF1A0f23036Aae88EEcecd1D9205Dd78c388fe263",
+            "runtimeCodeHash": null
+          },
+          {
+            "name": "feePolicy",
+            "address": "0x17B44C14F640fD429740FA3220f47a567c62725C",
+            "runtimeCodeHash": null
+          }
+        ]
+      },
+      {
+        "id": "concentrated-v4",
+        "kind": "concentrated",
+        "address": "0x9eBD78f3839996014238728b4c9C2f2A4e6759Cb",
+        "abiVersion": "v4",
+        "startBlock": "36220000n",
+        "runtimeCodeHash": "0x5ec422e766da1fa07cc2933f3999a3c8b36e76bdca5a4824f97b9b58c7ae7334",
+        "execution": {
+          "poolImplementation": "0x16aC2947598408d51999346c4BCFAB5f9c5c0c65",
+          "implementationRuntimeCodeHash": "0x65ee94939140483e0435412378e8530014202c7198470828531fc00c4e9f3352",
+          "cloneRuntimeCodeHash": "0xaf413778e53da65f7135682fade8580f8070622e1dbe11d6ceda3dcb593753ef"
+        },
+        "bindings": [
+          {
+            "name": "positionManager",
+            "address": "0x089163706d9956d7baeCeDF4eAb4aD6CcE7Ca2D6",
+            "runtimeCodeHash": null
+          }
+        ]
+      },
+      {
+        "id": "compounding-v4",
+        "kind": "compounding",
+        "address": "0x303EaA3BcF86283CBfe3f0E01290C11452bF91cf",
+        "abiVersion": "v4",
+        "startBlock": "36220000n",
+        "runtimeCodeHash": "0xc1fa11403f6df52b1f45f7dea96580d8796d5c02684a1d11d5426313e3809b48",
+        "execution": {
+          "poolImplementation": "0xa31Aab5A152DecD122040A0EAbF97122974D4Fcc",
+          "implementationRuntimeCodeHash": "0xb5d04cce25ab654abd49e64f468b0e8d9dba199efa3c706f75e8cace2b465431",
+          "cloneRuntimeCodeHash": "0x82d043220910df0e1747b48d8821414eef063db47760d01ff03bb0f0d69e967d"
+        },
+        "bindings": []
+      },
+      {
+        "id": "almm-v3",
+        "kind": "almm",
+        "address": "0x63c9f1cab865d708a49df5304b59e91474860bde",
+        "abiVersion": "v3",
+        "startBlock": "36220000n",
+        "runtimeCodeHash": null,
+        "execution": null,
+        "bindings": [
+          {
+            "name": "positionManager",
+            "address": "0xcde333bfa48ba90e6a6db75775488ac34d03e2c8",
+            "runtimeCodeHash": null
+          },
+          {
+            "name": "binLens",
+            "address": "0x2e6db44c2743666c858e87f15649354f394cc082",
+            "runtimeCodeHash": null
+          }
+        ]
+      }
+    ],
+    "finality": {
+      "kind": "confirmations",
+      "confirmations": 12
+    },
+    "runtimeCodeHashes": {
+      "0x1a19a3b0e69b33db3a2f9b2487866b4be04dd451": "0x0c2dea9d7e87f7974191b02162a131dbe38fd500681e835a2cb20b7a8b9f62e4",
+      "0xade9e6def440e05640ed07c4a701c238b9fb66a8": "0x3cd701f7547bf1ba314934558d01c33cc4909756b376a90a285e1645a653219c",
+      "0x3cdd7cc246cc49aea779e5e589bd175251617626": "0x1ec00147713743740d45896697607c3ad7c1bfe83a2b1303308fce4303936449",
+      "0x81f18ad1654a6dfc89388c8ffffc7bb616a9f6d0": "0xa5e3c858e69dc7759f286319a1d915d4aad3bc977ce68990435034309bb006a2",
+      "0x35353a2dab7426eccae6f5fb267702a542ab68fa": "0xf4bdf481252fb37bae95df148ba66e788ff59f22205d4e9c2f4df2c55c4fa173",
+      "0xadd644af3a868ef4165e04ca5eac280ab5819be3": "0xdb5e4bb300c932111ac68fe35f79752b6532217abecd31535ac7e59b06eda010",
+      "0xcca3e38eaa4f00e43599646a75cca164b97cc4eb": "0xd217691100337f885c4f9114608b648a2e6bcc15e9f9ab0f503049943c614a76",
+      "0x176d8c2b26c6373ba7c9dd5ed8e1a626caf2f206": "0x984b7f4a5143e7df50b6e9fa10d8acfc6f73e2c40773b160d7e430a29e6ba29c",
+      "0x074e4e25d1575fa2e66c7638f78c4af5283eb37c": "0xdcea75c8019820c32e10e438de0fef47a3c0106b210f20f53316489716e08c4f",
+      "0x014133029714f185d976549dd4ea2d6aca9ec031": "0xb4a95aa7c6310ba650ef3b77fabf62a6f5fbe03c21fae708b4950c71316febe5",
+      "0x9ebd78f3839996014238728b4c9c2f2a4e6759cb": "0x5ec422e766da1fa07cc2933f3999a3c8b36e76bdca5a4824f97b9b58c7ae7334",
+      "0x303eaa3bcf86283cbfe3f0e01290c11452bf91cf": "0xc1fa11403f6df52b1f45f7dea96580d8796d5c02684a1d11d5426313e3809b48",
+      "0x4200000000000000000000000000000000000006": "0xa62eedb6ad76577d404f9030968b640d14e72bdcd6428707d0d2f0f18546c294",
+      "0x16ac2947598408d51999346c4bcfab5f9c5c0c65": "0x65ee94939140483e0435412378e8530014202c7198470828531fc00c4e9f3352",
+      "0xa31aab5a152decd122040a0eabf97122974d4fcc": "0xb5d04cce25ab654abd49e64f468b0e8d9dba199efa3c706f75e8cace2b465431",
+      "0x3819200dd891c98f0443607ac9f3116f5a1ceaa7": "0x312fbe21c83c2fe3cd64930becf79564644830c5c08fc9ff0f0b09789668b8a6",
+      "0xa6c068eb674fe0ebf7d79a24944e47c40adcc30a": "0x932b476de5fe9f674f82f8cdde32bf34ca30afe05a448dc49e82b419a8ae779f",
+      "0x91fc9eb5ea887beecf087eb8f035943877c01a3d": "0xdc070f0904ef40f6b8f22e20c9e3df9534cac5cd17636e7762c284af30eff27b",
+      "0x794b8d559cfa850dcfc370201497d626f5991529": "0xe1ca28fd5ac0d7789c3da75163d30bb899afc0b44061018521da14350d8a07c5",
+      "0x2b51363addce6c6fb688f174836b2ae45bc5e9c7": "0xc268fbc62fa8a2242cd7dc8ebc02dc0166c9a6b792d0e76f93cc2e317f02a8c5"
+    },
+    "capabilities": {
+      "directExactInput": true,
+      "nativeInput": true,
+      "atomicMultiHop": true,
+      "maxHops": 3,
+      "atomicTwoHop": true
+    }
+  }
+}
+
+===== giwaSepoliaAutoRouteDeploymentCatalog =====
+{
+  "91342": {
+    "environment": "testnet",
+    "slot": "v4-auto-route-20260917",
+    "sourceCommit": "258e87b608b8f998e550142531d108e21c7282f6",
+    "startBlock": "36220000n",
+    "chain": {
+      "id": 91342,
+      "name": "GIWA Sepolia",
+      "nativeCurrency": {
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "rpcUrls": [
+        "https://sepolia-rpc.giwa.io"
+      ],
+      "blockExplorerUrl": "https://sepolia-explorer.giwa.io"
+    },
+    "contracts": {
+      "launch": {
+        "protocolVersion": 4,
+        "feePolicy": "0x17B44C14F640fD429740FA3220f47a567c62725C",
+        "factory": "0x35353a2Dab7426EcCAe6f5FB267702a542ab68fA",
+        "firstBuyExecutor": "0x1a19a3b0e69b33db3a2f9b2487866b4be04dd451",
+        "configRegistry": "0x6d043014972b87406C4757a5f2d655A24e0b0aF9",
+        "mathModule": "0xbF5f52525E7415896bCa7f7cBADcEB294dF173ef",
+        "metadataRegistry": null,
+        "graduationAdapter": "0xF1A0f23036Aae88EEcecd1D9205Dd78c388fe263",
+        "concentratedFactory": "0x9eBD78f3839996014238728b4c9C2f2A4e6759Cb",
+        "concentratedPositionManager": "0x089163706d9956d7baeCeDF4eAb4aD6CcE7Ca2D6",
+        "concentratedFeeController": "0x71Fea1fb18647986C4e02D0D06BFb6dD2491F6fE",
+        "compoundingFactory": "0x303EaA3BcF86283CBfe3f0E01290C11452bF91cf",
+        "compoundingFeeController": "0x00eaab75E3EA5cc68d39Ba8b7E531a0F822e4A8b"
+      },
+      "liquidityMarketMaker": {
+        "deployer": "0x8274c961bd026c35c83b6f88a545729a4d4b13e9",
+        "factory": "0x63c9f1cab865d708a49df5304b59e91474860bde",
+        "positionManager": "0xcde333bfa48ba90e6a6db75775488ac34d03e2c8",
+        "binLens": "0x2e6db44c2743666c858e87f15649354f394cc082",
+        "limitOrderManager": "0xd2958beac2db8e384a35e79aa96c446c6e811829",
+        "zapRouter": "0x76f82067d9c4b0a5a56a53f821e4b3bccf67a9bc",
+        "rewardManager": "0x94b3c9aa27c076607bc36211083d943173725ae6",
+        "oracle": "0x65933a1b181840bb2d4b1a64624cedce2e7ebb83",
+        "marketSyncController": "0xdf040d925dc2abaf02dc3ed3d669e75f9ca0a3dc"
+      },
+      "feeSharing": {
+        "factory": "0xb6131d1f86321c3de61f0e92fe136fa82e078927"
+      },
+      "policy": {
+        "tokenPolicyRegistry": "0xADD644Af3a868Ef4165e04CA5eac280ab5819bE3"
+      },
+      "routers": {
+        "executionRegistry": "0x3CDD7cC246Cc49aEa779E5E589Bd175251617626",
+        "native": "0xade9E6dEF440E05640ed07c4a701C238B9FB66a8",
+        "permit": "0xd0396d6c5ff4d1238c937b084cd9a3632374cc64",
+        "zap": "0x81f18aD1654A6dFc89388C8FFFFc7BB616a9f6d0",
+        "permit2": "0x000000000022d473030f116ddee9f6b43ac78ba3"
+      },
+      "vaults": {
+        "genesisFactory": "0xb268bf745d803800a3a31b331cad0547157c1e40",
+        "yieldFactory": "0x9f37ab9afba33ca28ea28327f0946343ee301c7f"
+      },
+      "tokens": {
+        "wrappedNative": "0x4200000000000000000000000000000000000006"
+      }
+    }
+  }
+}
+
+===== giwaSepoliaAutoRoutePoolProfiles =====
+[
+  {
+    "chainId": 91342,
+    "kind": "concentrated",
+    "factory": "0x9eBD78f3839996014238728b4c9C2f2A4e6759Cb",
+    "implementation": "0x16aC2947598408d51999346c4BCFAB5f9c5c0c65",
+    "factoryRuntimeCodeHash": "0x5ec422e766da1fa07cc2933f3999a3c8b36e76bdca5a4824f97b9b58c7ae7334",
+    "implementationRuntimeCodeHash": "0x65ee94939140483e0435412378e8530014202c7198470828531fc00c4e9f3352",
+    "creatorFeeSource": "factory",
+    "lifecycle": "current",
+    "executionEnabled": true,
+    "revision": "v4-auto-route-20260917",
+    "sourceCommit": "258e87b608b8f998e550142531d108e21c7282f6"
+  },
+  {
+    "chainId": 91342,
+    "kind": "compounding",
+    "factory": "0x303EaA3BcF86283CBfe3f0E01290C11452bF91cf",
+    "implementation": "0xa31Aab5A152DecD122040A0EAbF97122974D4Fcc",
+    "factoryRuntimeCodeHash": "0xc1fa11403f6df52b1f45f7dea96580d8796d5c02684a1d11d5426313e3809b48",
+    "implementationRuntimeCodeHash": "0xb5d04cce25ab654abd49e64f468b0e8d9dba199efa3c706f75e8cace2b465431",
+    "creatorFeeSource": "quote",
+    "lifecycle": "current",
+    "executionEnabled": true,
+    "revision": "v4-auto-route-20260917",
+    "sourceCommit": "258e87b608b8f998e550142531d108e21c7282f6"
+  }
+]
+
+===== giwaSepoliaPermissionless.chain =====
+{
+  "id": 91342,
+  "name": "GIWA Sepolia",
+  "nativeCurrency": {
+    "name": "Ether",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "rpcUrls": [
+    "https://sepolia-rpc.giwa.io"
+  ],
+  "blockExplorerUrl": "https://sepolia-explorer.giwa.io"
+}
